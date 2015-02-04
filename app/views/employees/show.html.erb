@@ -1,19 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @employee.name %>
-</p>
+<table class="table">
 
-<p>
-  <strong>Role:</strong>
-  <%= @employee.role %>
-</p>
+  <thead>
+	  <tr>
+	    <th>Company</th>
+	  </tr>
+  </thead>
 
-<p>
-  <strong>Job title:</strong>
-  <%= @employee.job_title %>
-</p>
+  <tbody>
+	  <tr>
+	    <td> <%= @employee.company.name %> </td>
+	  </tr>
+  </tbody>
+
+</table>
 
 <%= link_to 'Edit', edit_employee_path(@employee) %> |
 <%= link_to 'Back', employees_path %>

@@ -6,6 +6,18 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
+	<nav class="navbar navbar-default navbar-static-top">
+	  <div class="container">
+		  <h1>Consultancy Data</h1>
+	    <h3><%= link_to('Home',root_path) %></h3>
+		  <h3><%= link_to('Companies',companies_path) %></h3>
+		  <h3><%= link_to('Courses',courses_path) %></h3>
+		  <h3><%= link_to('Employees',employees_path) %></h3>
+		  <h3><%= link_to('Locations',locations_path) %></h3>
+	  </div>
+	</nav>
+
 <body>
 
 <%= yield %>
