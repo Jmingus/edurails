@@ -1,9 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @location.name %>
-</p>
+<table class="table">
+
+  <thead>
+	  <tr>
+	    <th>Company</th>
+	    <th>Courses</th>
+	  </tr>
+  </thead>
+
+	<tbody>
+		<tr>
+		  <td> <%= @location.company.name %> </td>
+
+			<% @location.courses.each do |course| %>
+		    <td>   <%= course.title %> </td>
+			<%end%>
+		</tr>
+	</tbody>
+</table>
+
 
 <%= link_to 'Edit', edit_location_path(@location) %> |
 <%= link_to 'Back', locations_path %>
