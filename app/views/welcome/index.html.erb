@@ -9,15 +9,15 @@
 
   <tbody>
   <% @company.each do |company| %>
-		<tr>
+    <tr>
 
       <td><%=link_to(company.name, company) %></td>
 
 
-		  <% @employee.each do |employee| %>
-		    <td><%= employee.name %> </td>
-		  <%end%>
-		  </tr>
+      <% @employee.each do |employee| %>
+        <td><%= employee.name %> </td>
+      <%end%>
+    </tr>
   <%end%>
   </tbody>
 
